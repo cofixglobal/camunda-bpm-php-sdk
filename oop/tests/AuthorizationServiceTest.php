@@ -11,19 +11,19 @@ namespace org\camunda\php\tests;
 use org\camunda\php\sdk\entity\request\AuthorizationRequest;
 use org\camunda\php\sdk\service\AuthorizationService;
 
-include("../../vendor/autoload.php");
+require "../../vendor/autoload.php";
 
-class AuthorizationServiceTest extends \PHPUnit_Framework_TestCase {
-  protected static $restApi;
-  protected static $as;
+class AuthorizationServiceTest extends \PHPUnit\Framework\TestCase {
+  protected static string $restApi;
+  protected static AuthorizationService $as;
 
-  public static function setUpBeforeClass() {
+  public static function setUpBeforeClass() :void {
     self::$restApi = 'http://localhost:8080/engine-rest';
     print("\n\nCLASS: " . __CLASS__ . "\n");
     self::$as = new AuthorizationService(self::$restApi);
   }
 
-  public static function tearDownAfterClass() {
+  public static function tearDownAfterClass() :void {
     self::$restApi = null;
   }
 

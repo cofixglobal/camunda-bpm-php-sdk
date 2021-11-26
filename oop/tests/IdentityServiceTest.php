@@ -13,17 +13,17 @@ use org\camunda\php\sdk\entity\request\IdentityRequest;
 use org\camunda\php\sdk\service\IdentityService;
 
 include("../../vendor/autoload.php");
-class IdentityServiceTest extends \PHPUnit_Framework_TestCase {
-  protected static $restApi;
-  protected static $is;
+class IdentityServiceTest extends \PHPUnit\Framework\TestCase {
+  protected static string $restApi;
+  protected static IdentityService $is;
 
-  public static function setUpBeforeClass() {
+  public static function setUpBeforeClass():void {
     self::$restApi = 'http://localhost:8080/engine-rest';
     print("\n\nCLASS: " . __CLASS__ . "\n");
     self::$is = new IdentityService(self::$restApi);
   }
 
-  public static function tearDownAfterClass() {
+  public static function tearDownAfterClass():void {
     self::$restApi = null;
   }
 

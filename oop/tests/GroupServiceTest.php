@@ -17,19 +17,19 @@ use org\camunda\php\sdk\entity\request\UserRequest;
 use org\camunda\php\sdk\service\GroupService;
 use org\camunda\php\sdk\service\UserService;
 
-class GroupServiceTest extends \PHPUnit_Framework_TestCase {
-  protected static $restApi;
-  protected static $gs;
-  protected static $us;
+class GroupServiceTest extends \PHPUnit\Framework\TestCase {
+  protected static string $restApi;
+  protected static GroupService $gs;
+  protected static UserService $us;
 
-  public static function setUpBeforeClass() {
+  public static function setUpBeforeClass():void {
     self::$restApi = 'http://localhost:8080/engine-rest';
     print("\n\nCLASS: " . __CLASS__ . "\n");
     self::$gs = new GroupService(self::$restApi);
     self::$us = new UserService(self::$restApi);
   }
 
-  public static function tearDownAfterClass() {
+  public static function tearDownAfterClass():void {
     self::$restApi = null;
   }
 

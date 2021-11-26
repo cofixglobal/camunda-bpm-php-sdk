@@ -13,7 +13,7 @@ use org\camunda\php\sdk\service\VariableInstanceService;
 
 include('../../vendor/autoload.php');
 
-class VariableInstanceTest extends \PHPUnit_Framework_TestCase {
+class VariableInstanceTest extends \PHPUnit\Framework\TestCase {
   protected static $restApi;
   protected static $vis;
 

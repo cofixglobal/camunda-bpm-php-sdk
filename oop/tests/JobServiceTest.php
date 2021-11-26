@@ -13,7 +13,7 @@ use org\camunda\php\sdk\service\JobService;
 
 include('../../vendor/autoload.php');
 
-class JobServiceTest extends \PHPUnit_Framework_TestCase {
+class JobServiceTest extends \PHPUnit\Framework\TestCase {
   protected static $restApi;
   protected static $js;
 

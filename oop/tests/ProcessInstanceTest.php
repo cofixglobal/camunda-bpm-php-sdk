@@ -14,7 +14,7 @@ use org\camunda\php\sdk\service\ProcessInstanceService;
 
 include('../../vendor/autoload.php');
 
-class ProcessInstanceTest extends \PHPUnit_Framework_TestCase {
+class ProcessInstanceTest extends \PHPUnit\Framework\TestCase {
   protected static $restApi;
   protected static $pis;
 

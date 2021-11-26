@@ -13,7 +13,7 @@ use org\camunda\php\sdk\service\MessageService;
 
 include('../../vendor/autoload.php');
 
-class MessageServiceTest extends \PHPUnit_Framework_TestCase {
+class MessageServiceTest extends \PHPUnit\Framework\TestCase {
   protected static $restApi;
   protected static $ms;
 

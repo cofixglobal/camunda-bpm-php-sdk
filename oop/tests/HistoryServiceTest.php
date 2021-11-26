@@ -16,17 +16,17 @@ use org\camunda\php\sdk\service\HistoryService;
 
 include('../../vendor/autoload.php');
 
-class HistoryServiceTest extends \PHPUnit_Framework_TestCase {
-  protected static $restApi;
-  protected static $hs;
+class HistoryServiceTest extends \PHPUnit\Framework\TestCase {
+  protected static string $restApi;
+  protected static HistoryService $hs;
 
-  public static function setUpBeforeClass() {
+  public static function setUpBeforeClass():void {
     self::$restApi = 'http://localhost:8080/engine-rest';
     print("\n\nCLASS: " . __CLASS__ . "\n");
     self::$hs = new HistoryService(self::$restApi);
   }
 
-  public static function tearDownAfterClass() {
+  public static function tearDownAfterClass():void {
     self::$restApi = null;
   }
 

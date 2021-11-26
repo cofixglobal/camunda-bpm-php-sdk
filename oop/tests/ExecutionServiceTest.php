@@ -12,19 +12,19 @@ use org\camunda\php\sdk\entity\request\ExecutionRequest;
 use org\camunda\php\sdk\entity\request\VariableRequest;
 use org\camunda\php\sdk\service\ExecutionService;
 
-include("../../vendor/autoload.php");
+require "../../vendor/autoload.php" ;
 
-class ExecutionServiceTest extends \PHPUnit_Framework_TestCase {
-  protected static $restApi;
-  protected static $es;
+class ExecutionServiceTest extends \PHPUnit\Framework\TestCase {
+  protected static string $restApi;
+  protected static ExecutionService $es;
 
-  public static function setUpBeforeClass() {
+  public static function setUpBeforeClass():void {
     self::$restApi = 'http://localhost:8080/engine-rest';
     print("\n\nCLASS: " . __CLASS__ . "\n");
     self::$es = new ExecutionService(self::$restApi);
   }
 
-  public static function tearDownAfterClass() {
+  public static function tearDownAfterClass():void {
     self::$restApi = null;
   }
 

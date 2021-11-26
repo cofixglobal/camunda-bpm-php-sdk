@@ -18,7 +18,7 @@ use org\camunda\php\sdk\service\UserService;
 
 include('../../vendor/autoload.php');
 
-class TaskServiceTest extends \PHPUnit_Framework_TestCase {
+class TaskServiceTest extends \PHPUnit\Framework\TestCase {
   protected static $restApi;
   protected static $ts;
   protected static $us;
